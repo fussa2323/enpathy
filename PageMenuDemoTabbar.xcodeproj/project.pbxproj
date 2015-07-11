@@ -40,6 +40,8 @@
 		470E8E751B514F060097A627 /* YoyakuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 470E8E731B514F060097A627 /* YoyakuTableViewCell.xib */; };
 		470E8E781B514F150097A627 /* MyHatsuanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470E8E761B514F150097A627 /* MyHatsuanTableViewCell.swift */; };
 		470E8E791B514F150097A627 /* MyHatsuanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 470E8E771B514F150097A627 /* MyHatsuanTableViewCell.xib */; };
+		47B4D5E51B5180DA00A2B7C1 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B4D5E41B5180DA00A2B7C1 /* splash.png */; };
+		47B4D5E71B518A0A00A2B7C1 /* login-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B4D5E61B518A0A00A2B7C1 /* login-logo.png */; };
 		A616A0371A603D68008CE0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A616A0361A603D68008CE0F6 /* AppDelegate.swift */; };
 		A616A03C1A603D68008CE0F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A616A03A1A603D68008CE0F6 /* Main.storyboard */; };
 		A616A03E1A603D68008CE0F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A616A03D1A603D68008CE0F6 /* Images.xcassets */; };
@@ -93,6 +95,8 @@
 		470E8E731B514F060097A627 /* YoyakuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YoyakuTableViewCell.xib; sourceTree = "<group>"; };
 		470E8E761B514F150097A627 /* MyHatsuanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyHatsuanTableViewCell.swift; sourceTree = "<group>"; };
 		470E8E771B514F150097A627 /* MyHatsuanTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyHatsuanTableViewCell.xib; sourceTree = "<group>"; };
+		47B4D5E41B5180DA00A2B7C1 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		47B4D5E61B518A0A00A2B7C1 /* login-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-logo.png"; sourceTree = "<group>"; };
 		A616A0311A603D68008CE0F6 /* PageMenuDemoTabbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageMenuDemoTabbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A616A0351A603D68008CE0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A616A0361A603D68008CE0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -215,7 +219,9 @@
 		A616A0341A603D68008CE0F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				47B4D5E41B5180DA00A2B7C1 /* splash.png */,
 				470E8E581B5140BD0097A627 /* navicon_white_info@2x.png */,
+				47B4D5E61B518A0A00A2B7C1 /* login-logo.png */,
 				A616A0351A603D68008CE0F6 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -319,10 +325,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				470E8E5D1B514C7C0097A627 /* OsusumeTableViewController.xib in Resources */,
+				47B4D5E51B5180DA00A2B7C1 /* splash.png in Resources */,
 				470E8E611B514CA00097A627 /* SandouTableViewController.xib in Resources */,
 				470E8E591B5140BD0097A627 /* navicon_white_info@2x.png in Resources */,
 				A616A03C1A603D68008CE0F6 /* Main.storyboard in Resources */,
 				470E8E791B514F150097A627 /* MyHatsuanTableViewCell.xib in Resources */,
+				47B4D5E71B518A0A00A2B7C1 /* login-logo.png in Resources */,
 				470E8E651B514CBB0097A627 /* YoyakuTableViewController.xib in Resources */,
 				A616A0411A603D68008CE0F6 /* LaunchScreen.xib in Resources */,
 				470E8E6D1B514E660097A627 /* OsusumeTableViewCell.xib in Resources */,
