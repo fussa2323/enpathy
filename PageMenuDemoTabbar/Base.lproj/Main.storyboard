@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wen-hY-q8N">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Item 1-->
+        <scene sceneID="Rgs-J7-hPp">
+            <objects>
+                <viewController id="Wen-hY-q8N" customClass="PageMenuOneViewController" customModule="PageMenuDemoTabbar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UZW-JH-KEB"/>
+                        <viewControllerLayoutGuide type="bottom" id="OQr-ot-gQ3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qKy-GN-1hL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXO-pq-GWb">
+                                <rect key="frame" x="0.0" y="40" width="600" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enpathy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdO-Om-MIC">
+                                        <rect key="frame" x="228" y="0.0" width="144" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="144" id="A6d-QR-vBy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggI-N7-oIa">
+                                        <rect key="frame" x="559" y="9" width="22" height="22"/>
+                                        <state key="normal" image="navicon_white_info.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4rz-nE-5cR"/>
+                                    <constraint firstAttribute="trailing" secondItem="ggI-N7-oIa" secondAttribute="trailing" constant="19" id="Ksh-u7-CiB"/>
+                                    <constraint firstItem="HdO-Om-MIC" firstAttribute="top" secondItem="IXO-pq-GWb" secondAttribute="top" id="ZBO-Ma-6Z5"/>
+                                    <constraint firstAttribute="centerX" secondItem="HdO-Om-MIC" secondAttribute="centerX" id="fsJ-Bj-VhP"/>
+                                    <constraint firstAttribute="bottom" secondItem="HdO-Om-MIC" secondAttribute="bottom" constant="2" id="uIw-Ch-uAe"/>
+                                    <constraint firstItem="ggI-N7-oIa" firstAttribute="top" secondItem="IXO-pq-GWb" secondAttribute="top" constant="9" id="upq-zK-3Ka"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="IXO-pq-GWb" firstAttribute="top" secondItem="UZW-JH-KEB" secondAttribute="top" constant="20" id="Iab-u5-z8k"/>
+                            <constraint firstItem="IXO-pq-GWb" firstAttribute="leading" secondItem="qKy-GN-1hL" secondAttribute="leading" id="chp-1U-ZHb"/>
+                            <constraint firstAttribute="trailing" secondItem="IXO-pq-GWb" secondAttribute="trailing" id="lwH-A8-iyh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="jJ6-xw-YCs"/>
+                    <navigationItem key="navigationItem" id="K6U-dR-5GK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ri0-jD-5jJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1162" y="13"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="navicon_white_info.png" width="22" height="22"/>
+    </resources>
+</document>
