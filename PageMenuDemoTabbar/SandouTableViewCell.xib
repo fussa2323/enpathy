@@ -92,6 +92,13 @@
                         <color key="textColor" red="0.1215686275" green="0.69411764710000001" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sandouzumi.png" translatesAutoresizingMaskIntoConstraints="NO" id="l1A-Kh-70n">
+                        <rect key="frame" x="242" y="0.0" width="70" height="57"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="57" id="nBE-iZ-8KI"/>
+                            <constraint firstAttribute="width" constant="70" id="yYq-wz-mRW"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="HoG-wg-omK" secondAttribute="bottom" id="2jM-BQ-A80"/>
@@ -99,6 +106,7 @@
                     <constraint firstItem="VD9-ft-IHQ" firstAttribute="leading" secondItem="dl7-hN-dje" secondAttribute="leading" id="AOq-gN-YiK"/>
                     <constraint firstItem="CfL-XV-ChB" firstAttribute="leading" secondItem="2VW-wr-dQB" secondAttribute="trailing" constant="19" id="Bsy-C8-InE"/>
                     <constraint firstItem="VD9-ft-IHQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="DlK-w0-WaJ"/>
+                    <constraint firstItem="l1A-Kh-70n" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="H9d-lf-da2"/>
                     <constraint firstAttribute="centerX" secondItem="HoG-wg-omK" secondAttribute="centerX" id="McH-16-qeq"/>
                     <constraint firstItem="xvQ-P8-afa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="QuQ-fh-THc"/>
                     <constraint firstItem="kSf-88-6lr" firstAttribute="leading" secondItem="CfL-XV-ChB" secondAttribute="trailing" constant="45" id="cI2-6C-SJ8"/>
@@ -110,6 +118,7 @@
                     <constraint firstItem="xvQ-P8-afa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-15" id="oUQ-n8-EHz"/>
                     <constraint firstItem="CfL-XV-ChB" firstAttribute="bottom" secondItem="2VW-wr-dQB" secondAttribute="bottom" id="xOI-Q9-gxE"/>
                     <constraint firstItem="kSf-88-6lr" firstAttribute="bottom" secondItem="CfL-XV-ChB" secondAttribute="bottom" id="z11-HK-CGP"/>
+                    <constraint firstItem="l1A-Kh-70n" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="zFN-pg-ilS"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -124,4 +133,7 @@
             <point key="canvasLocation" x="305" y="450"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="sandouzumi.png" width="116" height="117"/>
+    </resources>
 </document>

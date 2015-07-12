@@ -43,7 +43,6 @@ class AddEventViewController: UIViewController {
         event.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
             if (success) {
-//                self.navigationController?.popToRootViewControllerAnimated(true)
                 self.dismissViewControllerAnimated(true, completion: nil)
             } else {
                 // There was a problem, check error.description
