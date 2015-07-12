@@ -216,10 +216,10 @@
             </objects>
             <point key="canvasLocation" x="1879" y="-247"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="WAj-uw-OWA">
             <objects>
-                <viewController id="xPz-XW-un0" sceneMemberID="viewController">
+                <viewController id="xPz-XW-un0" customClass="SearchViewController" customModule="PageMenuDemoTabbar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hAC-Nb-J3l"/>
                         <viewControllerLayoutGuide type="bottom" id="yMR-XX-04w"/>
@@ -227,7 +227,35 @@
                     <view key="view" contentMode="scaleToFill" id="z3n-4V-wbz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3M-NC-j7x">
+                                <rect key="frame" x="248" y="550" width="105" height="30"/>
+                                <state key="normal" title="この内容で検索">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.41568627450000001" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButton:" destination="xPz-XW-un0" eventType="touchUpInside" id="fgj-0i-Aop"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvy-lH-BhN">
+                                <color key="backgroundColor" red="0.88411458330000003" green="0.88411458330000003" blue="0.88411458330000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ser.png" translatesAutoresizingMaskIntoConstraints="NO" id="TYG-Ne-glo">
+                                <rect key="frame" x="16" y="20" width="568" height="580"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88411458333333337" green="0.88411458333333337" blue="0.88411458333333337" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="TYG-Ne-glo" firstAttribute="leading" secondItem="z3n-4V-wbz" secondAttribute="leadingMargin" id="PAr-g6-aAH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TYG-Ne-glo" secondAttribute="trailing" id="UbK-eN-SWG"/>
+                            <constraint firstItem="TYG-Ne-glo" firstAttribute="top" secondItem="hAC-Nb-J3l" secondAttribute="bottom" id="W5d-Ue-6yk"/>
+                            <constraint firstItem="yMR-XX-04w" firstAttribute="top" secondItem="P3M-NC-j7x" secondAttribute="bottom" constant="20" id="imu-3F-Gke"/>
+                            <constraint firstItem="yMR-XX-04w" firstAttribute="top" secondItem="TYG-Ne-glo" secondAttribute="bottom" id="sgZ-Nt-Tdz"/>
+                            <constraint firstAttribute="centerX" secondItem="P3M-NC-j7x" secondAttribute="centerX" id="uzE-kJ-5mV"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="R2N-xT-30X">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="oam-8w-XK4"/>
@@ -240,5 +268,6 @@
     </scenes>
     <resources>
         <image name="navicon_white_info.png" width="22" height="22"/>
+        <image name="ser.png" width="640" height="1136"/>
     </resources>
 </document>
