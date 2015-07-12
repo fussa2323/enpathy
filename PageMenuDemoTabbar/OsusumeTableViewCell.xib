@@ -115,6 +115,15 @@
                     <constraint firstItem="3tt-Jd-mje" firstAttribute="bottom" secondItem="Dhn-wn-DKT" secondAttribute="bottom" id="p1d-nV-eEw"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="hUB-Wl-OXv" id="jTH-YN-8Bc"/>
+                <outlet property="joinNum" destination="Q8x-ih-7An" id="JMa-LC-ucT"/>
+                <outlet property="placeLabel" destination="sjL-M2-1J1" id="wfs-9J-3uA"/>
+                <outlet property="tagLabel" destination="GWR-Vw-ixd" id="V9S-eK-PDL"/>
+                <outlet property="timeLabel" destination="QqZ-cM-WfY" id="RtU-kb-cJJ"/>
+                <outlet property="titleLabel" destination="ePW-rL-HWM" id="zzn-cY-pvf"/>
+                <outlet property="totalNum" destination="Dhn-wn-DKT" id="PWS-Na-Emb"/>
+            </connections>
             <point key="canvasLocation" x="275" y="484"/>
         </tableViewCell>
     </objects>

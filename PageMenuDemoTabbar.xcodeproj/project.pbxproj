@@ -50,6 +50,8 @@
 		A616A04D1A603D69008CE0F6 /* PageMenuDemoTabbarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A616A04C1A603D69008CE0F6 /* PageMenuDemoTabbarTests.swift */; };
 		A616A0571A603E45008CE0F6 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A616A0561A603E45008CE0F6 /* CAPSPageMenu.swift */; };
 		A616A0591A603E7E008CE0F6 /* PageMenuOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A616A0581A603E7E008CE0F6 /* PageMenuOneViewController.swift */; };
+		BF8EE7F81B521F7200790BCD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8EE7F61B521F7200790BCD /* DetailViewController.swift */; };
+		BF8EE7F91B521F7200790BCD /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8EE7F71B521F7200790BCD /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		A616A04C1A603D69008CE0F6 /* PageMenuDemoTabbarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMenuDemoTabbarTests.swift; sourceTree = "<group>"; };
 		A616A0561A603E45008CE0F6 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CAPSPageMenu.swift; path = "../Library/PageMenu-master/Classes/CAPSPageMenu.swift"; sourceTree = "<group>"; };
 		A616A0581A603E7E008CE0F6 /* PageMenuOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuOneViewController.swift; sourceTree = "<group>"; };
+		BF8EE7F61B521F7200790BCD /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BF8EE7F71B521F7200790BCD /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,8 @@
 				470E8E731B514F060097A627 /* YoyakuTableViewCell.xib */,
 				470E8E761B514F150097A627 /* MyHatsuanTableViewCell.swift */,
 				470E8E771B514F150097A627 /* MyHatsuanTableViewCell.xib */,
+				BF8EE7F61B521F7200790BCD /* DetailViewController.swift */,
+				BF8EE7F71B521F7200790BCD /* DetailViewController.xib */,
 			);
 			path = PageMenuDemoTabbar;
 			sourceTree = "<group>";
@@ -334,6 +340,7 @@
 				A616A03C1A603D68008CE0F6 /* Main.storyboard in Resources */,
 				470E8E791B514F150097A627 /* MyHatsuanTableViewCell.xib in Resources */,
 				47B4D5E71B518A0A00A2B7C1 /* login-logo.png in Resources */,
+				BF8EE7F91B521F7200790BCD /* DetailViewController.xib in Resources */,
 				470E8E651B514CBB0097A627 /* YoyakuTableViewController.xib in Resources */,
 				A616A0411A603D68008CE0F6 /* LaunchScreen.xib in Resources */,
 				470E8E6D1B514E660097A627 /* OsusumeTableViewCell.xib in Resources */,
@@ -362,6 +369,7 @@
 				47C82BDF1B521A160044F18E /* AddEventViewController.swift in Sources */,
 				470E8E6C1B514E660097A627 /* OsusumeTableViewCell.swift in Sources */,
 				A616A0571A603E45008CE0F6 /* CAPSPageMenu.swift in Sources */,
+				BF8EE7F81B521F7200790BCD /* DetailViewController.swift in Sources */,
 				470E8E781B514F150097A627 /* MyHatsuanTableViewCell.swift in Sources */,
 				A616A0591A603E7E008CE0F6 /* PageMenuOneViewController.swift in Sources */,
 				A616A0371A603D68008CE0F6 /* AppDelegate.swift in Sources */,

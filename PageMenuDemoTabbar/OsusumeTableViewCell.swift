@@ -10,7 +10,15 @@ import UIKit
 
 class OsusumeTableViewCell: UITableViewCell {
 
-
+  @IBOutlet weak var tagLabel: UILabel!
+  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var totalNum: UILabel!
+  @IBOutlet weak var joinNum: UILabel!
+  @IBOutlet weak var dateLabel: UILabel!
+  @IBOutlet weak var timeLabel: UILabel!
+  @IBOutlet weak var placeLabel: UILabel!
+  
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
