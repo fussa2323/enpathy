@@ -10,6 +10,8 @@ import UIKit
 
 class SandouTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var la: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

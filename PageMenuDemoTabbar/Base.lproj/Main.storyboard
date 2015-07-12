@@ -19,27 +19,42 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXO-pq-GWb">
                                 <rect key="frame" x="0.0" y="40" width="600" height="40"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggI-N7-oIa">
+                                        <rect key="frame" x="559" y="9" width="22" height="22"/>
+                                        <state key="normal" image="navicon_white_info.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="xPz-XW-un0" kind="show" id="gCI-Ba-O5R"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ng-Gq-Xd4">
+                                        <rect key="frame" x="14" y="5" width="44" height="30"/>
+                                        <state key="normal" title="logout">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logoutButton:" destination="Wen-hY-q8N" eventType="touchUpInside" id="KTk-bF-8ks"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enpathy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdO-Om-MIC">
                                         <rect key="frame" x="228" y="0.0" width="144" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="144" id="A6d-QR-vBy"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggI-N7-oIa">
-                                        <rect key="frame" x="559" y="9" width="22" height="22"/>
-                                        <state key="normal" image="navicon_white_info.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="4rz-nE-5cR"/>
                                     <constraint firstAttribute="trailing" secondItem="ggI-N7-oIa" secondAttribute="trailing" constant="19" id="Ksh-u7-CiB"/>
                                     <constraint firstItem="HdO-Om-MIC" firstAttribute="top" secondItem="IXO-pq-GWb" secondAttribute="top" id="ZBO-Ma-6Z5"/>
+                                    <constraint firstItem="7Ng-Gq-Xd4" firstAttribute="leading" secondItem="IXO-pq-GWb" secondAttribute="leading" constant="14" id="cJk-2X-NKi"/>
                                     <constraint firstAttribute="centerX" secondItem="HdO-Om-MIC" secondAttribute="centerX" id="fsJ-Bj-VhP"/>
+                                    <constraint firstItem="7Ng-Gq-Xd4" firstAttribute="top" secondItem="IXO-pq-GWb" secondAttribute="top" constant="5" id="kHO-Db-jOe"/>
                                     <constraint firstAttribute="bottom" secondItem="HdO-Om-MIC" secondAttribute="bottom" constant="2" id="uIw-Ch-uAe"/>
                                     <constraint firstItem="ggI-N7-oIa" firstAttribute="top" secondItem="IXO-pq-GWb" secondAttribute="top" constant="9" id="upq-zK-3Ka"/>
                                 </constraints>
@@ -58,6 +73,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ri0-jD-5jJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1162" y="13"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WAj-uw-OWA">
+            <objects>
+                <viewController id="xPz-XW-un0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hAC-Nb-J3l"/>
+                        <viewControllerLayoutGuide type="bottom" id="yMR-XX-04w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z3n-4V-wbz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="R2N-xT-30X">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="oam-8w-XK4"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lca-tU-Ot3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1974" y="755"/>
         </scene>
     </scenes>
     <resources>
