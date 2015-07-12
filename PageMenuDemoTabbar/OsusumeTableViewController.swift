@@ -7,47 +7,82 @@
 //
 
 import UIKit
+import Parse
 
 class OsusumeTableViewController: UITableViewController {
-        
+//  var titleArray = [String]()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+//      var event = PFObject(className:"Event")
+//      event["title"] = "Parse Test !"
+//      event.saveInBackgroundWithBlock {
+//        (success: Bool, error: NSError?) -> Void in
+//        if (success) {
+//          // The object has been saved.
+//        } else {
+//          // There was a problem, check error.description
+//        }
+//      }
+      self.tableView.registerNib(UINib(nibName: "OsusumeTableViewCell", bundle: nil), forCellReuseIdentifier: "OsusumeTableViewCell")
+      var query = PFQuery(className:"Event")
+      query.whereKey("title", containsString:"Parse Test !")
+      
+//      query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+//        for object in (objects as! [PFObject]) {
+//          
+//          if(error == nil){
+//            self.titleArray.append(object.objectForKey("title") as! String)
+//            println(object.objectForKey("title"))
+//          }
+//        }
+//      }
+      
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+  
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return 10
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
 
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell : OsusumeTableViewCell = tableView.dequeueReusableCellWithIdentifier("OsusumeTableViewCell") as! OsusumeTableViewCell
         // Configure the cell...
+       
 
         return cell
     }
-    */
+
+  
+  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return 130.0
+  }
+  
+  override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    return 0.001
+  }
+  
 
     /*
     // Override to support conditional editing of the table view.
