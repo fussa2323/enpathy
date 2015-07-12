@@ -20,7 +20,7 @@
                         <constraint firstAttribute="width" constant="320" id="6P2-XI-Fhc"/>
                         <constraint firstAttribute="height" constant="60" id="OUh-rb-bbc"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="26"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="28"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -31,13 +31,12 @@
                         <constraint firstAttribute="width" constant="60" id="yvL-Ql-L1j"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="24"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="広島" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGG-eZ-oeh">
-                    <rect key="frame" x="140" y="281" width="320" height="40"/>
+                    <rect key="frame" x="160" y="281" width="300" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="320" id="EB4-QA-kuw"/>
+                        <constraint firstAttribute="width" constant="300" id="EB4-QA-kuw"/>
                         <constraint firstAttribute="height" constant="40" id="ror-GO-peh"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
@@ -61,24 +60,30 @@
                         <constraint firstAttribute="height" constant="60" id="f0J-r4-yRh"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="場所" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsd-kZ-P7z">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="場所:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsd-kZ-P7z">
                     <rect key="frame" x="140" y="231" width="80" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="Y0L-UE-4Ua"/>
                         <constraint firstAttribute="height" constant="40" id="pVH-qQ-ijX"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="24"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHPの勉強会を開きます！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdm-ek-gsR">
-                    <rect key="frame" x="140" y="380" width="320" height="100"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tts-uA-wdD">
+                    <rect key="frame" x="140" y="361" width="55" height="28"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="24"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHPの勉強会を開きます！" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdm-ek-gsR">
+                    <rect key="frame" x="160" y="380" width="300" height="100"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="DhE-zV-RAe"/>
-                        <constraint firstAttribute="width" constant="320" id="kh3-ah-P2R"/>
+                        <constraint firstAttribute="width" constant="300" id="kh3-ah-P2R"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="22"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -93,25 +98,35 @@
                 <constraint firstItem="Dlu-Df-PNM" firstAttribute="centerX" secondItem="lGG-eZ-oeh" secondAttribute="centerX" id="9H4-jw-hc2"/>
                 <constraint firstItem="rsd-kZ-P7z" firstAttribute="leading" secondItem="A50-9f-G6k" secondAttribute="leading" id="Aqz-jp-6Y4"/>
                 <constraint firstItem="pdm-ek-gsR" firstAttribute="top" secondItem="lGG-eZ-oeh" secondAttribute="bottom" constant="59" id="CtO-Zp-6fE"/>
+                <constraint firstItem="lGG-eZ-oeh" firstAttribute="trailing" secondItem="pdm-ek-gsR" secondAttribute="trailing" id="EmN-Bj-vlA"/>
                 <constraint firstItem="lGG-eZ-oeh" firstAttribute="centerX" secondItem="A50-9f-G6k" secondAttribute="centerX" id="GlW-6Y-fsg"/>
                 <constraint firstItem="Dlu-Df-PNM" firstAttribute="leading" secondItem="i0o-m8-IDL" secondAttribute="trailing" id="INM-iD-dRS"/>
+                <constraint firstItem="lGG-eZ-oeh" firstAttribute="trailing" secondItem="A50-9f-G6k" secondAttribute="trailing" id="K10-3Z-NiW"/>
+                <constraint firstItem="rsd-kZ-P7z" firstAttribute="leading" secondItem="Tts-uA-wdD" secondAttribute="leading" id="KJF-0S-OfW"/>
                 <constraint firstItem="Dlu-Df-PNM" firstAttribute="top" secondItem="A50-9f-G6k" secondAttribute="bottom" constant="20" id="QV7-hA-Awx"/>
                 <constraint firstItem="rsd-kZ-P7z" firstAttribute="top" secondItem="RqI-yS-Hu2" secondAttribute="bottom" constant="21" id="Sg9-aH-DqK"/>
                 <constraint firstAttribute="centerX" secondItem="A50-9f-G6k" secondAttribute="centerX" id="VTP-ta-Udl"/>
+                <constraint firstItem="Tts-uA-wdD" firstAttribute="leading" secondItem="pdm-ek-gsR" secondAttribute="leading" constant="-10" id="VYq-Ej-vBY"/>
                 <constraint firstItem="Dlu-Df-PNM" firstAttribute="leading" secondItem="i0o-m8-IDL" secondAttribute="trailing" constant="-10" id="XED-Og-nBg"/>
                 <constraint firstItem="lGG-eZ-oeh" firstAttribute="centerX" secondItem="pdm-ek-gsR" secondAttribute="centerX" id="a66-7k-CXx"/>
                 <constraint firstItem="i0o-m8-IDL" firstAttribute="leading" secondItem="RqI-yS-Hu2" secondAttribute="trailing" constant="10" id="aHD-ir-CZT"/>
                 <constraint firstItem="lGG-eZ-oeh" firstAttribute="top" secondItem="rsd-kZ-P7z" secondAttribute="bottom" constant="10" id="dgB-gO-MIe"/>
+                <constraint firstItem="Dlu-Df-PNM" firstAttribute="trailing" secondItem="pdm-ek-gsR" secondAttribute="trailing" constant="-10" id="exT-UC-A5i"/>
+                <constraint firstItem="Tts-uA-wdD" firstAttribute="top" secondItem="lGG-eZ-oeh" secondAttribute="bottom" constant="40" id="llZ-lP-O5p"/>
                 <constraint firstItem="RqI-yS-Hu2" firstAttribute="leading" secondItem="rsd-kZ-P7z" secondAttribute="trailing" constant="128" id="pDR-qo-UmD"/>
                 <constraint firstItem="A50-9f-G6k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="x5r-RM-fGa"/>
                 <constraint firstItem="lGG-eZ-oeh" firstAttribute="top" secondItem="Dlu-Df-PNM" secondAttribute="bottom" constant="50" id="zTP-JN-IRg"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="GlW-6Y-fsg"/>
+                    <exclude reference="a66-7k-CXx"/>
                     <exclude reference="zTP-JN-IRg"/>
                     <exclude reference="pDR-qo-UmD"/>
+                    <exclude reference="VYq-Ej-vBY"/>
                     <exclude reference="9H4-jw-hc2"/>
                     <exclude reference="INM-iD-dRS"/>
+                    <exclude reference="exT-UC-A5i"/>
                 </mask>
             </variation>
         </view>
