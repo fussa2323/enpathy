@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wen-hY-q8N">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Item 1-->
@@ -94,12 +95,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ri0-jD-5jJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1162" y="13"/>
+            <point key="canvasLocation" x="1177" y="7"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Event View Controller-->
         <scene sceneID="cCS-st-NWG">
             <objects>
-                <viewController id="wlN-d7-oSX" sceneMemberID="viewController">
+                <viewController id="wlN-d7-oSX" customClass="AddEventViewController" customModule="PageMenuDemoTabbar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M8j-oB-iN6"/>
                         <viewControllerLayoutGuide type="bottom" id="dXd-hB-ob0"/>
@@ -108,16 +109,112 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a72-1a-Mf4">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </scrollView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="イベントタイトル" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmo-Yi-H6l">
+                                <rect key="frame" x="46" y="65" width="508" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="日付" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qu8-8F-1HX">
+                                <rect key="frame" x="46" y="141" width="508" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="開催場所" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Uu-3F-k9v">
+                                <rect key="frame" x="46" y="217" width="508" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新規イベントを発案する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdA-Lt-Dtq">
+                                <rect key="frame" x="207" y="25" width="187" height="20"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="時間帯" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oW7-lO-vHb">
+                                <rect key="frame" x="46" y="179" width="508" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タグ" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRg-Ay-bfh">
+                                <rect key="frame" x="46" y="103" width="508" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="募集人数" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TWn-bf-4MC">
+                                <rect key="frame" x="46" y="255" width="508" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="イベント概要" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bDx-I5-p54">
+                                <rect key="frame" x="46" y="293" width="508" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpM-0U-Tbp">
+                                <rect key="frame" x="229" y="360" width="144" height="30"/>
+                                <state key="normal" title="イベントを投稿する!!">
+                                    <color key="titleColor" red="0.97254901959999995" green="0.41568627450000001" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveBUtton:" destination="wlN-d7-oSX" eventType="touchUpInside" id="jld-YX-KGO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FpM-0U-Tbp" firstAttribute="centerX" secondItem="bDx-I5-p54" secondAttribute="centerX" constant="0.5" id="3a2-cd-xhi"/>
+                            <constraint firstItem="vmo-Yi-H6l" firstAttribute="leading" secondItem="4ot-49-u7A" secondAttribute="leadingMargin" constant="30" id="43p-80-vdC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Uu-3F-k9v" secondAttribute="trailing" constant="235" id="81I-NP-UiY"/>
+                            <constraint firstItem="8Uu-3F-k9v" firstAttribute="top" secondItem="oW7-lO-vHb" secondAttribute="bottom" constant="8" id="8V0-dZ-YD6"/>
+                            <constraint firstAttribute="centerX" secondItem="rdA-Lt-Dtq" secondAttribute="centerX" id="CYs-cU-IPh"/>
+                            <constraint firstItem="dRg-Ay-bfh" firstAttribute="leading" secondItem="4ot-49-u7A" secondAttribute="leadingMargin" constant="30" id="DRY-8k-liV"/>
+                            <constraint firstItem="rdA-Lt-Dtq" firstAttribute="top" secondItem="M8j-oB-iN6" secondAttribute="bottom" constant="5" id="J0H-ff-heR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qu8-8F-1HX" secondAttribute="trailing" constant="30" id="Koc-2P-AJ8"/>
+                            <constraint firstItem="TWn-bf-4MC" firstAttribute="top" secondItem="8Uu-3F-k9v" secondAttribute="bottom" constant="8" id="Lw0-9H-047"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oW7-lO-vHb" secondAttribute="trailing" constant="30" id="MJ3-GN-1Vh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TWn-bf-4MC" secondAttribute="trailing" constant="30" id="NMQ-Wq-2vR"/>
+                            <constraint firstItem="Qu8-8F-1HX" firstAttribute="leading" secondItem="4ot-49-u7A" secondAttribute="leadingMargin" constant="30" id="O2r-40-5JL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Uu-3F-k9v" secondAttribute="trailing" constant="30" id="OFd-jq-Bgf"/>
+                            <constraint firstItem="8Uu-3F-k9v" firstAttribute="leading" secondItem="4ot-49-u7A" secondAttribute="leadingMargin" constant="30" id="Pa8-Uu-Q6Y"/>
+                            <constraint firstItem="oW7-lO-vHb" firstAttribute="leading" secondItem="4ot-49-u7A" secondAttribute="leadingMargin" constant="30" id="R3I-BH-qKK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vmo-Yi-H6l" secondAttribute="trailing" constant="30" id="Tdv-zv-0J8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bDx-I5-p54" secondAttribute="trailing" constant="30" id="Uw2-bh-jqf"/>
+                            <constraint firstItem="FpM-0U-Tbp" firstAttribute="top" secondItem="bDx-I5-p54" secondAttribute="bottom" constant="37" id="Vuu-tP-Ndb"/>
+                            <constraint firstItem="8Uu-3F-k9v" firstAttribute="leading" secondItem="4ot-49-u7A" secondAttribute="leadingMargin" constant="30" id="ZXd-gg-3mv"/>
+                            <constraint firstItem="dRg-Ay-bfh" firstAttribute="top" secondItem="vmo-Yi-H6l" secondAttribute="bottom" constant="8" id="aWH-un-Jet"/>
+                            <constraint firstItem="vmo-Yi-H6l" firstAttribute="top" secondItem="rdA-Lt-Dtq" secondAttribute="bottom" constant="20" id="bS5-Wa-aTQ"/>
+                            <constraint firstItem="bDx-I5-p54" firstAttribute="top" secondItem="TWn-bf-4MC" secondAttribute="bottom" constant="8" id="dLg-RG-gXk"/>
+                            <constraint firstItem="bDx-I5-p54" firstAttribute="leading" secondItem="4ot-49-u7A" secondAttribute="leadingMargin" constant="30" id="ffJ-AS-ehr"/>
+                            <constraint firstItem="TWn-bf-4MC" firstAttribute="leading" secondItem="4ot-49-u7A" secondAttribute="leadingMargin" constant="30" id="gmd-52-5Oc"/>
+                            <constraint firstItem="Qu8-8F-1HX" firstAttribute="top" secondItem="dRg-Ay-bfh" secondAttribute="bottom" constant="8" id="lMi-VG-ag7"/>
+                            <constraint firstItem="vmo-Yi-H6l" firstAttribute="centerX" secondItem="rdA-Lt-Dtq" secondAttribute="centerX" id="xHd-T2-ayw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vmo-Yi-H6l" secondAttribute="trailing" constant="235" id="xLK-Nn-fov"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dRg-Ay-bfh" secondAttribute="trailing" constant="30" id="xnG-gx-tmu"/>
+                            <constraint firstItem="oW7-lO-vHb" firstAttribute="top" secondItem="Qu8-8F-1HX" secondAttribute="bottom" constant="8" id="zUD-df-6Qi"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xHd-T2-ayw"/>
+                                <exclude reference="xLK-Nn-fov"/>
+                                <exclude reference="81I-NP-UiY"/>
+                                <exclude reference="Pa8-Uu-Q6Y"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="dateTextField" destination="Qu8-8F-1HX" id="IuH-Ds-fEl"/>
+                        <outlet property="joinNumTextField" destination="TWn-bf-4MC" id="qcl-xp-Jff"/>
+                        <outlet property="placeTextField" destination="8Uu-3F-k9v" id="Y1R-Kj-eHr"/>
+                        <outlet property="summary" destination="bDx-I5-p54" id="FZH-i6-uLf"/>
+                        <outlet property="tagLabel" destination="dRg-Ay-bfh" id="U67-UP-uef"/>
+                        <outlet property="timeTextField" destination="oW7-lO-vHb" id="iCB-Bp-7VZ"/>
+                        <outlet property="titleTextField" destination="vmo-Yi-H6l" id="yYg-uW-x67"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6q6-M1-fzk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879" y="-269"/>
+            <point key="canvasLocation" x="1879" y="-247"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WAj-uw-OWA">

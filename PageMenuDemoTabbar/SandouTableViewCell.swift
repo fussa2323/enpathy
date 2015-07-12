@@ -10,7 +10,14 @@ import UIKit
 
 class SandouTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var la: UILabel!
+    
+    @IBOutlet weak var tagLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var totalNum: UILabel!
+    @IBOutlet weak var joinNum: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var placeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
