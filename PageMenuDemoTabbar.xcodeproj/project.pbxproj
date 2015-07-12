@@ -42,6 +42,7 @@
 		470E8E791B514F150097A627 /* MyHatsuanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 470E8E771B514F150097A627 /* MyHatsuanTableViewCell.xib */; };
 		47B4D5E51B5180DA00A2B7C1 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B4D5E41B5180DA00A2B7C1 /* splash.png */; };
 		47B4D5E71B518A0A00A2B7C1 /* login-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 47B4D5E61B518A0A00A2B7C1 /* login-logo.png */; };
+		47C82BDF1B521A160044F18E /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C82BDE1B521A160044F18E /* AddEventViewController.swift */; };
 		A616A0371A603D68008CE0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A616A0361A603D68008CE0F6 /* AppDelegate.swift */; };
 		A616A03C1A603D68008CE0F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A616A03A1A603D68008CE0F6 /* Main.storyboard */; };
 		A616A03E1A603D68008CE0F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A616A03D1A603D68008CE0F6 /* Images.xcassets */; };
@@ -97,6 +98,7 @@
 		470E8E771B514F150097A627 /* MyHatsuanTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyHatsuanTableViewCell.xib; sourceTree = "<group>"; };
 		47B4D5E41B5180DA00A2B7C1 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		47B4D5E61B518A0A00A2B7C1 /* login-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-logo.png"; sourceTree = "<group>"; };
+		47C82BDE1B521A160044F18E /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		A616A0311A603D68008CE0F6 /* PageMenuDemoTabbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageMenuDemoTabbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A616A0351A603D68008CE0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A616A0361A603D68008CE0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				A616A03D1A603D68008CE0F6 /* Images.xcassets */,
 				A616A0561A603E45008CE0F6 /* CAPSPageMenu.swift */,
 				A616A0361A603D68008CE0F6 /* AppDelegate.swift */,
+				47C82BDE1B521A160044F18E /* AddEventViewController.swift */,
 				A616A0581A603E7E008CE0F6 /* PageMenuOneViewController.swift */,
 				470E8E5A1B514C7C0097A627 /* OsusumeTableViewController.swift */,
 				470E8E5B1B514C7C0097A627 /* OsusumeTableViewController.xib */,
@@ -356,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				470E8E5C1B514C7C0097A627 /* OsusumeTableViewController.swift in Sources */,
+				47C82BDF1B521A160044F18E /* AddEventViewController.swift in Sources */,
 				470E8E6C1B514E660097A627 /* OsusumeTableViewCell.swift in Sources */,
 				A616A0571A603E45008CE0F6 /* CAPSPageMenu.swift in Sources */,
 				470E8E781B514F150097A627 /* MyHatsuanTableViewCell.swift in Sources */,

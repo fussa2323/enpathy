@@ -112,6 +112,15 @@
                     <constraint firstItem="kSf-88-6lr" firstAttribute="bottom" secondItem="CfL-XV-ChB" secondAttribute="bottom" id="z11-HK-CGP"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="JPG-qv-W6W" id="mWI-k7-lRO"/>
+                <outlet property="joinNum" destination="qPZ-eT-vAR" id="Rz6-LB-LCP"/>
+                <outlet property="placeLabel" destination="7F5-aI-fis" id="D0f-R3-Jqb"/>
+                <outlet property="tagLabel" destination="VD9-ft-IHQ" id="7n9-zT-XJe"/>
+                <outlet property="timeLabel" destination="SgT-KF-qSx" id="iYT-3R-BE1"/>
+                <outlet property="titleLabel" destination="dl7-hN-dje" id="85x-1b-LFJ"/>
+                <outlet property="totalNum" destination="CfL-XV-ChB" id="pTN-zg-DXV"/>
+            </connections>
             <point key="canvasLocation" x="305" y="450"/>
         </tableViewCell>
     </objects>
