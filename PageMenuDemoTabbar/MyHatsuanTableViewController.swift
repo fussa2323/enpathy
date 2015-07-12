@@ -5,9 +5,9 @@
 //  Created by Yohei Fusayasu on 7/11/15.
 //  Copyright (c) 2015 Niklas Fahl. All rights reserved.
 //
-
+import Parse
 import UIKit
-
+import Social
 class MyHatsuanTableViewController: UITableViewController {
         
     override func viewDidLoad() {

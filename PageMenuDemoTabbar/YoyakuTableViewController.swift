@@ -4,7 +4,7 @@
 //
 //  Created by Yohei Fusayasu on 7/11/15.
 //  Copyright (c) 2015 Niklas Fahl. All rights reserved.
-//
+// 1'''参加予定
 
 import UIKit
 
@@ -12,6 +12,8 @@ class YoyakuTableViewController: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.registerNib(UINib(nibName: "YoyakuTableViewCell", bundle: nil),forCellReuseIdentifier: "Yoyaku")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -36,18 +38,18 @@ class YoyakuTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return 10
     }
 
-    /*
+   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Yoyaku", forIndexPath: indexPath) as! YoyakuTableViewCell
 
         // Configure the cell...
 
         return cell
     }
-    */
+   
 
     /*
     // Override to support conditional editing of the table view.
