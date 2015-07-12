@@ -10,123 +10,100 @@ import UIKit
 import Parse
 
 class OsusumeTableViewController: UITableViewController {
-//  var titleArray = [String]()
-  
+    
+    var alleventData:NSMutableArray = NSMutableArray()
+    
+    //Informationテーブルのデータをすべて読み込む
+    func loadInfoData(){
+        //初期化
+        alleventData.removeAllObjects()
+        
+        //タイムライン用のクエリを定義
+        var findEvent: PFQuery = PFQuery(className: "Event")
+        
+        //クエリで取得したデータに対しての処理
+        //        SVProgressHUD.show()
+        findEvent.findObjectsInBackgroundWithBlock{
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            if error == nil {
+                println("Successfully retrieved \(objects!.count) scores.")
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        self.alleventData.addObject(object)
+                    }
+                }
+                //                SVProgressHUD.dismiss()
+            } else {
+                println("Error: \(error!) \(error!.userInfo!)")
+            }
+            
+            //NSArray型にいったん格納して順番をリバースさせる
+            let array: NSArray = self.alleventData.reverseObjectEnumerator().allObjects
+            self.alleventData = NSMutableArray(array: array)
+            self.tableView.reloadData()
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-//      var event = PFObject(className:"Event")
-//      event["title"] = "Parse Test !"
-//      event.saveInBackgroundWithBlock {
-//        (success: Bool, error: NSError?) -> Void in
-//        if (success) {
-//          // The object has been saved.
-//        } else {
-//          // There was a problem, check error.description
-//        }
-//      }
-      self.tableView.registerNib(UINib(nibName: "OsusumeTableViewCell", bundle: nil), forCellReuseIdentifier: "OsusumeTableViewCell")
-      var query = PFQuery(className:"Event")
-      query.whereKey("title", containsString:"Parse Test !")
-      
-//      query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
-//        for object in (objects as! [PFObject]) {
-//          
-//          if(error == nil){
-//            self.titleArray.append(object.objectForKey("title") as! String)
-//            println(object.objectForKey("title"))
-//          }
-//        }
-//      }
-      
-    }
 
+        self.tableView.registerNib(UINib(nibName: "OsusumeTableViewCell", bundle: nil), forCellReuseIdentifier: "OsusumeTableViewCell")
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-  
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 10
+        return self.alleventData.count
     }
-
-
+    
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
         let cell : OsusumeTableViewCell = tableView.dequeueReusableCellWithIdentifier("OsusumeTableViewCell") as! OsusumeTableViewCell
         // Configure the cell...
-       
-
+        let event:PFObject = (self.alleventData.objectAtIndex(indexPath.row) as! PFObject)
+        
+        cell.titleLabel.text = event.objectForKey("title") as? String
+        cell.tagLabel.text = event.objectForKey("tag") as? String
+        cell.dateLabel.text = event.objectForKey("date") as? String
+        cell.timeLabel.text = event.objectForKey("time") as? String
+        cell.placeLabel.text = event.objectForKey("place") as? String
+        
         return cell
     }
-
-  
-  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    return 130.0
-  }
-  
-  override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-    return 0.001
-  }
-  
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
+    
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 130.0
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.001
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        
+        self.loadInfoData()
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
     
 }
